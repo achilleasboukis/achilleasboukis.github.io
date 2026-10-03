@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Achilleas Boukis, Ph.D. — Associate Professor in Marketing</title>
+<title>Achilleas Boukis, Ph.D. — Professor of Marketing, University of Birmingham</title>
+<meta name="description" content="Achilleas Boukis is Professor of Marketing at Birmingham Business School, University of Birmingham, researching branding, services, hospitality and tourism, and AI in marketing.">
+<meta property="og:title" content="Achilleas Boukis, Ph.D. — Professor of Marketing">
+<meta property="og:description" content="Professor of Marketing, Birmingham Business School. Research on branding, services, hospitality and tourism, and AI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -597,447 +600,461 @@
     .hero h1 { font-size: 2.6rem; }
     .stats { grid-template-columns: 1fr 1fr; }
   }
+
+  /* ── ADDITIONS ── */
+  a { color: inherit; }
+  .bio-text a, .theme-card a, .link-gold { color: var(--navy); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+  .nav-links { display: flex; gap: 10px; margin-top: 14px; }
+  .nav-contact .pill { display: inline-block; border: 1px solid rgba(184,150,74,0.5); padding: 3px 10px; border-radius: 2px; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .btn { display: inline-block; padding: 9px 18px; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--gold); color: var(--gold-light); border-radius: 2px; transition: background .2s, color .2s; }
+  .btn:hover { background: var(--gold); color: var(--navy); }
+  .btn.solid { background: var(--gold); color: var(--navy); }
+  .callout { margin-top: 28px; max-width: 680px; padding: 20px 24px; background: #fff; border-left: 3px solid var(--gold); font-size: 0.9rem; line-height: 1.7; color: #3a3530; }
+  .callout strong { color: var(--navy); }
+  .theme-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .theme-card { background: #fff; border: 1px solid var(--stone); padding: 26px; }
+  .theme-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; line-height: 1.25; }
+  .theme-card p { font-size: 0.86rem; line-height: 1.7; color: #3a3530; margin-bottom: 12px; }
+  .theme-card .outlets { font-size: 0.76rem; color: var(--muted); line-height: 1.6; }
+  .sub-h { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--navy); margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--stone); }
+  .sub-h:first-child { margin-top: 0; }
+  .note { font-size: 0.82rem; color: var(--muted); margin: -16px 0 24px; }
+  details.conf { border-bottom: 1px solid var(--stone); }
+  details.conf summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--navy); }
+  details.conf summary::-webkit-details-marker { display: none; }
+  details.conf summary .count { margin-left:auto; font-family: 'DM Sans', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  details.conf summary::after { content: '+'; color: var(--gold); font-size: 1.4rem; margin-left: 16px; }
+  details.conf[open] summary::after { content: '−'; }
+  details.conf .conf-list { padding-bottom: 16px; }
+  .pub-year-label { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); padding-top: 24px; }
+  .inpress { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-left: 4px; }
+  .lang { font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--stone); padding: 1px 6px; margin-left: 6px; border-radius: 2px; white-space: nowrap; }
+  footer { padding: 32px 72px; font-size: 0.75rem; color: var(--muted); }
+
+  /* mobile top bar */
+  .topbar { display: none; }
+  @media (max-width: 900px) {
+    body { display: block; }
+    .topbar { display: flex; position: sticky; top: 0; z-index: 200; background: var(--navy); color: #fff; align-items: center; justify-content: space-between; padding: 14px 16px; }
+    .topbar .tb-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; }
+    .topbar button { background: none; border: 1px solid rgba(184,150,74,0.5); color: var(--gold-light); font: inherit; font-size: 0.72rem; letter-spacing: .1em; text-transform: uppercase; padding: 7px 12px; border-radius: 2px; cursor: pointer; }
+    nav { display: none; position: fixed; top: 52px; left: 0; right: 0; bottom: auto; width: 100%; max-height: calc(100vh - 52px); padding: 20px 28px 28px; }
+    nav.open { display: flex; }
+    nav .nav-name, nav .nav-title, nav .nav-divider { display: none; }
+    .hero, section { padding: 44px 20px; }
+    footer { padding: 24px 20px; }
+    .hero::before, .hero::after { display: none; }
+  }
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 2.6rem; }
+    .grant-item { grid-template-columns: 1fr; }
+    .teaching-list li { grid-template-columns: 1fr; gap: 2px; }
+    .pub-list li, .press-list li { grid-template-columns: 26px 1fr; gap: 10px; }
+  }
 </style>
 </head>
 <body>
 
-<!-- SIDEBAR NAV -->
-<nav>
+<div class="topbar"><span class="tb-name">Achilleas Boukis</span><button type="button" id="menuBtn" aria-expanded="false" aria-controls="sidenav">Menu</button></div>
+
+<nav id="sidenav">
   <div class="nav-name">Achilleas Boukis</div>
-  <div class="nav-title">Ph.D. · Associate Professor<br>Marketing</div>
+  <div class="nav-title">Ph.D. · Professor of Marketing</div>
   <div class="nav-divider"></div>
-  <a href="#bio">Bio</a>
-  <a href="#education">Education</a>
-  <a href="#research-leadership">Research Leadership</a>
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
   <a href="#publications">Publications</a>
-  <a href="#special-issues">Special Issues</a>
-  <a href="#grants">Grants</a>
-  <a href="#awards">Awards</a>
+  <a href="#conferences">Conference Papers</a>
+  <a href="#leadership">Leadership &amp; Service</a>
+  <a href="#grants">Grants &amp; Awards</a>
   <a href="#teaching">Teaching</a>
-  <a href="#conferences">Conferences</a>
-  <a href="#talks">Invited Talks</a>
-  <a href="#press">Press</a>
+  <a href="#media">Talks &amp; Media</a>
   <div class="nav-contact">
-    University of Birmingham<br>
     Birmingham Business School<br>
-    Edgbaston Park Rd, B15 2TT<br><br>
-    <a href="mailto:a.boukis@bham.ac.uk">a.boukis@bham.ac.uk</a>
+    University of Birmingham<br>
+    University House, Edgbaston Park Road<br>Birmingham B15 2TT, UK<br><br>
+    <a href="mailto:a.boukis@bham.ac.uk">a.boukis@bham.ac.uk</a><br>
+    +44 (0)121 414 4577<br>Office G39, University House
+    <div class="nav-links" style="flex-wrap:wrap"><a class="pill" href="https://scholar.google.co.uk/citations?user=XRQdIRsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a><a class="pill" href="https://orcid.org/0000-0002-9196-1004" target="_blank" rel="noopener">ORCID</a><a class="pill" href="https://www.linkedin.com/in/achilleas-boukis-067a8a17" target="_blank" rel="noopener">LinkedIn</a><a class="pill" href="https://research.birmingham.ac.uk/en/persons/achilleas-boukis/" target="_blank" rel="noopener">Pure</a></div>
   </div>
 </nav>
 
 <main>
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-label">Associate Professor in Marketing · University of Birmingham</div>
+  <header class="hero" id="top">
+    <div class="hero-label">Professor of Marketing · University of Birmingham</div>
     <h1>Achilleas<br><em>Boukis,</em> Ph.D.</h1>
-    <div class="hero-sub">Birmingham Business School · Director of the Ph.D. Programme</div>
+    <div class="hero-sub">Birmingham Business School · Head of the PhD Programme, Department of Marketing</div>
     <div class="hero-tags">
-      <span class="tag">Branding</span>
-      <span class="tag">Digital Marketing</span>
-      <span class="tag">Services Marketing</span>
-      <span class="tag">Platform Economy</span>
-      <span class="tag">NFTs &amp; Crypto</span>
-      <span class="tag">Consumer Behaviour</span>
+      <span class="tag">Branding</span><span class="tag">Marketing Strategy</span><span class="tag">Services Marketing</span>
+      <span class="tag">Digital Assets &amp; Blockchain</span><span class="tag">Hospitality &amp; Tourism</span><span class="tag">AI in Services</span>
     </div>
-  </div>
+    <div class="hero-actions">
+      <a class="btn solid" href="mailto:a.boukis@bham.ac.uk">Email me</a>
+      <a class="btn" href="#publications">Publications</a>
+      <a class="btn" href="https://scholar.google.co.uk/citations?user=XRQdIRsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="btn" href="https://www.researchgate.net/profile/Achilleas-Boukis" target="_blank" rel="noopener">ResearchGate</a>
+    </div>
+  </header>
 
-  <!-- STATS -->
   <section style="padding-top:48px; padding-bottom:48px;">
     <div class="stats">
-      <div class="stat">
-        <div class="stat-number">35+</div>
-        <div class="stat-label">Journal Publications</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">55+</div>
-        <div class="stat-label">Conference Papers</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">5</div>
-        <div class="stat-label">Special Issues Led</div>
-      </div>
-      <div class="stat">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">PhD &amp; DBA Students</div>
-      </div>
+      <div class="stat"><div class="stat-number">36</div><div class="stat-label">Journal Articles</div></div>
+      <div class="stat"><div class="stat-number">56</div><div class="stat-label">Conference Papers</div></div>
+      <div class="stat"><div class="stat-number">6</div><div class="stat-label">Special Issues</div></div>
+      <div class="stat"><div class="stat-number">185+</div><div class="stat-label">Journal Reviews</div></div>
     </div>
   </section>
 
-  <!-- BIO -->
-  <section id="bio">
+  <section id="about">
     <div class="section-label">About</div>
     <h2>Biography</h2>
     <div class="bio-text">
-      <p>I am an Associate Professor in Marketing at the University of Birmingham and Director of the Ph.D. Programme. As an active researcher in marketing strategy, I conduct work in the branding, technology, and services marketing areas, with a focus on understanding how value is created for different stakeholders during technology and service interactions.</p>
-      <p>My research further explores the role of branding in emerging technology contexts — including the platform economy, cryptocurrencies, and NFTs. I have published in leading academic outlets including the <em>Journal of Business Research</em>, <em>Tourism Management</em>, <em>British Journal of Management</em>, <em>European Journal of Marketing</em>, <em>Psychology &amp; Marketing</em>, <em>Annals of Tourism Research</em>, and the <em>European Management Review</em>.</p>
-      <p>My teaching interests span Marketing Research, Branding, and Services Marketing across undergraduate, MBA, and Ph.D./DBA levels. I have presented at EMAC, AMS, and AMA, and serve as Associate Editor for three journals. I am also a contributor to practitioner and public outlets including <em>The Conversation</em>, <em>Business Leader</em>, and <em>Capital.gr</em>.</p>
+      <p>I am a Professor of Marketing at Birmingham Business School, University of Birmingham, where I serve as Head of the PhD Programme in the Department of Marketing. I hold a PhD in Marketing from the University of Strathclyde (2014).</p>
+      <p>My research sits at the intersection of marketing strategy, branding and emerging technologies. I study how customers engage with brands and interact with frontline employees, and how firms can use new technologies, such as blockchain and AI, to transform customer experiences. A core strand of my work examines how organisations, particularly in services, tourism and hospitality, build and communicate product and corporate brands to internal and external audiences.</p>
+      <p>My work appears in journals including the <em>Journal of Business Research</em>, <em>Tourism Management</em>, <em>Annals of Tourism Research</em>, <em>British Journal of Management</em>, <em>European Journal of Marketing</em> and <em>Psychology &amp; Marketing</em>. I am Associate Editor of the <em>Journal of Strategic Marketing</em>, the <em>Review of Marketing Science</em> and the <em>Journal of Service Theory and Practice</em>, and serve on the editorial boards of several leading marketing and tourism journals.</p>
+      <p>I lead master's and MBA teaching in Branding and Marketing Management, including delivery on the University's Singapore campus, and supervise PhD and DBA candidates. I also write for business audiences in outlets such as <em>The Conversation</em>, <em>Business Leader</em> and <em>Capital.gr</em>.</p>
     </div>
-  </section>
+    <div class="callout"><strong>Prospective PhD students.</strong> I welcome enquiries in branding, services, hospitality and tourism, digital assets and blockchain, and AI in services. Please <a class="link-gold" href="mailto:a.boukis@bham.ac.uk">email me</a> with a short research proposal.</div>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="section-label">Academic Background</div>
-    <h2>Education &amp; Career</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-year">2005</div>
-        <div class="timeline-title">B.Sc. in Management</div>
-        <div class="timeline-inst">Athens University of Economics and Business</div>
+    <div class="editorial-grid" style="margin-top:56px">
+      <div>
+        <h3 class="sub-h" style="margin-top:0">Academic appointments</h3>
+        <div class="timeline"><div class="timeline-item"><div class="timeline-year">2025 – present</div><div class="timeline-title">Professor of Marketing</div><div class="timeline-inst">University of Birmingham</div></div>
+<div class="timeline-item"><div class="timeline-year">2021 – 2025</div><div class="timeline-title">Associate Professor of Marketing</div><div class="timeline-inst">University of Birmingham</div></div>
+<div class="timeline-item"><div class="timeline-year">2013 – 2021</div><div class="timeline-title">Assistant Professor in Marketing</div><div class="timeline-inst">University of Sussex</div></div></div>
+        <h3 class="sub-h">Visiting positions</h3>
+        <div class="timeline"><div class="timeline-item"><div class="timeline-year">2022 – present</div><div class="timeline-title">Visiting Professor</div><div class="timeline-inst">Aristotle University of Thessaloniki, Greece</div></div>
+<div class="timeline-item"><div class="timeline-year">2018</div><div class="timeline-title">Visiting Scholar</div><div class="timeline-inst">Fordham University, New York, USA</div></div>
+<div class="timeline-item"><div class="timeline-year">2017</div><div class="timeline-title">Visiting Scholar</div><div class="timeline-inst">Zagreb School of Economics and Management, Croatia</div></div>
+<div class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-title">Visiting Scholar</div><div class="timeline-inst">Queensland University of Technology, Brisbane, Australia</div></div></div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2008</div>
-        <div class="timeline-title">M.Sc. in Marketing and New Technologies</div>
-        <div class="timeline-inst">Athens University of Economics and Business</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2014</div>
-        <div class="timeline-title">Ph.D. in Marketing</div>
-        <div class="timeline-inst">Strathclyde Business School</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2013–2021</div>
-        <div class="timeline-title">Assistant Professor in Marketing</div>
-        <div class="timeline-inst">University of Sussex</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-year">2021–present</div>
-        <div class="timeline-title">Associate Professor in Marketing</div>
-        <div class="timeline-inst">University of Birmingham, Birmingham Business School</div>
+      <div>
+        <h3 class="sub-h" style="margin-top:0">Education</h3>
+        <div class="timeline"><div class="timeline-item"><div class="timeline-year">2024</div><div class="timeline-title">Senior Fellow of the Higher Education Academy (SFHEA)</div><div class="timeline-inst">University of Birmingham</div></div>
+<div class="timeline-item"><div class="timeline-year">2016</div><div class="timeline-title">PGCert in Higher Education</div><div class="timeline-inst">University of Sussex</div></div>
+<div class="timeline-item"><div class="timeline-year">2009 – 2014</div><div class="timeline-title">Ph.D. in Marketing</div><div class="timeline-inst">University of Strathclyde, Glasgow</div></div>
+<div class="timeline-item"><div class="timeline-year">2006 – 2008</div><div class="timeline-title">M.Sc. in Marketing and New Technologies</div><div class="timeline-inst">Athens University of Economics and Business</div></div>
+<div class="timeline-item"><div class="timeline-year">2001 – 2005</div><div class="timeline-title">B.Sc. (Hons) in Management</div><div class="timeline-inst">Athens University of Economics and Business</div></div></div>
       </div>
     </div>
   </section>
 
-  <!-- RESEARCH LEADERSHIP -->
-  <section id="research-leadership">
-    <div class="section-label">Service to the Field</div>
-    <h2>Research Leadership</h2>
-    <div class="editorial-grid">
-      <div class="editorial-block">
-        <h3>Associate Editor</h3>
-        <ul>
-          <li><span class="badge">AE</span>Journal of Strategic Marketing</li>
-          <li><span class="badge">AE</span>Journal of Service Theory and Practice</li>
-          <li><span class="badge">AE</span>Review of Marketing Science</li>
-        </ul>
-      </div>
-      <div class="editorial-block">
-        <h3>Editorial Boards</h3>
-        <ul>
-          <li>Tourism Management</li>
-          <li>Journal of Service Theory and Practice</li>
-          <li>Journal of Strategic Marketing</li>
-          <li>Review of Marketing Science</li>
-          <li>Journal of Product and Brand Management</li>
-          <li>Italian Journal of Marketing</li>
-          <li>Journal of Consumer Behavior</li>
-        </ul>
-      </div>
+  <section id="research">
+    <div class="section-label">Research</div>
+    <h2>Research themes</h2>
+    <p class="note" style="margin-top:-12px">My research asks how firms, employees and customers create value together when services and technologies change. I mainly use scenario-based experiments with online panels, alongside surveys, configurational (fsQCA) and qualitative methods.</p>
+    <div class="theme-grid">
+      <div class="theme-card"><h3>Frontline employees &amp; service encounters</h3><p>How customer incivility, customer threats and employee deviance affect frontline staff, and how organisational rewards and leadership help them cope.</p><div class="outlets"><em>Tourism Management</em> (2020, 2024) · <em>Annals of Tourism Research</em> (2023)</div></div>
+      <div class="theme-card"><h3>Internal &amp; employer branding</h3><p>How internal marketing and internal market orientation turn employees into a source of brand equity.</p><div class="outlets"><em>British Journal of Management</em> (2026) · <em>Journal of Business Research</em> (2021) · <em>European Management Review</em></div></div>
+      <div class="theme-card"><h3>Hospitality, tourism &amp; the sharing economy</h3><p>Loyalty programmes, travel influencers, shared luxury services and in-home service consumption.</p><div class="outlets"><em>Annals of Tourism Research</em> (2024) · <em>Tourism Management</em> (2025) · <em>Journal of Business Research</em> (2021, 2022, 2024)</div></div>
+      <div class="theme-card"><h3>AI, blockchain &amp; digital assets</h3><p>How AI announcements, AI recommendations, cryptocurrencies and NFTs reshape branding and customer relationships.</p><div class="outlets"><em>Journal of Business Research</em> (2023) · <em>Journal of Marketing Management</em> (2025) · <em>AMS Review</em> (2026, two articles) · <em>Review of Marketing Science</em> (2022)</div></div>
     </div>
   </section>
 
-  <!-- SPECIAL ISSUES -->
-  <section id="special-issues">
-    <div class="section-label">Editorial</div>
-    <h2>Special Issues &amp; Guest Editorials</h2>
-    <div class="cards">
-      <div class="card">
-        <div class="card-year">2026 · Industrial Marketing Management</div>
-        <div class="card-title">Engaging Industrial Customers with AI-Enabled Service Recovery</div>
-      </div>
-      <div class="card">
-        <div class="card-year">2025 · International Marketing Review</div>
-        <div class="card-title">Beyond Goods: The Rise of Experiential Consumption in International Markets</div>
-      </div>
-      <div class="card">
-        <div class="card-year">2025 · Journal of Consumer Behavior</div>
-        <div class="card-title">Exploring Consumers' Journey from Physical Ownership to Digital Assets</div>
-      </div>
-      <div class="card">
-        <div class="card-year">2025 · Journal of Product and Brand Management</div>
-        <div class="card-title">Brand Inclusivity</div>
-      </div>
-      <div class="card">
-        <div class="card-year">2023 · European Journal of Marketing</div>
-        <div class="card-title">Reimagining Theory and Practice — AM2023 Conference</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PUBLICATIONS -->
   <section id="publications">
-    <div class="section-label">Scholarly Output</div>
-    <h2>Journal Publications</h2>
-    <ol class="pub-list">
-      <li><span class="pub-num">1</span><span class="pub-text">AM Doherty, L O'Malley, Boukis A. (2026). "Editorial: Marketing Revolution: Reimagining Theory and Practice." <span class="pub-journal">European Journal of Marketing</span>, 60(3), 585–588.</span></li>
-      <li><span class="pub-num">2</span><span class="pub-text">Boukis A., Licsandru T. (2026). "Guest editorial: Understanding brand inclusivity." <span class="pub-journal">Journal of Product and Brand Management</span>, 35(2), 165–171.</span></li>
-      <li><span class="pub-num">3</span><span class="pub-text">Chatzipanagiotou K., Christodoulides G., Gounaris S., Dalakoura A., Boukis A. (2025). "Managing Brand Assets Internally: Turning Employees into an Integral Source of Brand Equity." <span class="pub-journal">British Journal of Management</span>, in press.</span></li>
-      <li><span class="pub-num">4</span><span class="pub-text">Qiu J., Storey C., Boukis A. (2025). "Social capital creation through frontline employees' social media use and its effects on performance." <span class="pub-journal">European Journal of Marketing</span>, in press.</span></li>
-      <li><span class="pub-num">5</span><span class="pub-text">Boukis A., Restuccia M. (2025). "Developing a Strategic Typology of Non-Fungible Tokens (NFTs)." <span class="pub-journal">Journal of Marketing Management</span>, in press.</span></li>
-      <li><span class="pub-num">6</span><span class="pub-text">Boukis A., Caruelle D., Harris L. (2025). "Dealing with Travel Influencers: Opportunity or Threat?" <span class="pub-journal">Tourism Management</span>.</span></li>
-      <li><span class="pub-num">7</span><span class="pub-text">Boukis A. (2024). "The Effect of tokenized rewards on customer loyalty programs." <span class="pub-journal">Annals of Tourism Research</span>, 109, 103851.</span></li>
-      <li><span class="pub-num">8</span><span class="pub-text">Boukis A., Christodoulides G., Semaan R., Stathopoulou A. (2024). "What drives consumers towards shared luxury services?" <span class="pub-journal">Journal of Business Research</span>, 77, 114634.</span></li>
-      <li><span class="pub-num">9</span><span class="pub-text">Boukis A., Harris L., Koritos C. (2024). '"Give me an upgrade or I will give you a bad review!" Investigating customer threats in hospitality.' <span class="pub-journal">Tourism Management</span>, 104, 104927.</span></li>
-      <li><span class="pub-num">10</span><span class="pub-text">Semaan R., Boukis A., Christodoulides G., Papastathopoulos A. (2023). "A typology of consumers in shared luxury services." <span class="pub-journal">Journal of Strategic Marketing</span>, 2(4), 536–550.</span></li>
-      <li><span class="pub-num">11</span><span class="pub-text">Boukis A. (2023). "Storytelling in Initial Coin Offerings: Attracting investment or gaining referrals?" <span class="pub-journal">Journal of Business Research</span>, 160, 113796.</span></li>
-      <li><span class="pub-num">12</span><span class="pub-text">Boukis A., Koritos C., Papastathopoulos A., Buhalis D. (2023). "Customer incivility as an identity threat for frontline employees." <span class="pub-journal">Annals of Tourism Research</span>, 100, 103555.</span></li>
-      <li><span class="pub-num">13</span><span class="pub-text">Boukis A. (2022). "Exploring the sources of consumer-based brand equity in the cryptocurrency market." <span class="pub-journal">Review of Marketing Science</span>, 20(1), 233–255.</span></li>
-      <li><span class="pub-num">14</span><span class="pub-text">Tsiotsou R., Boukis A. (2022). "In-Home Service Consumption: A Systematic Review, Integrative Framework, and Future Research Agenda." <span class="pub-journal">Journal of Business Research</span>, 145, 49–64.</span></li>
-      <li><span class="pub-num">15</span><span class="pub-text">Christodoulides G., Athwal N., Boukis A., Semaan R. (2021). "New forms of luxury consumption in the sharing economy." <span class="pub-journal">Journal of Business Research</span>, 137, 89–99.</span></li>
-      <li><span class="pub-num">16</span><span class="pub-text">Sibai O., Mimoun L., Boukis A. (2021). "Authenticating brand activism." <span class="pub-journal">Psychology &amp; Marketing</span>, 38(10), 1651–1669.</span></li>
-      <li><span class="pub-num">17</span><span class="pub-text">Boukis A., Balmer J., Punjaisri K., Kaminakis K. (2021). "Unveiling frontline employees' brand construal types during corporate brand promise delivery." <span class="pub-journal">Journal of Business Research</span>, 131, 673–685.</span></li>
-      <li><span class="pub-num">18</span><span class="pub-text">Qiu J., Storey C. (2021). "Internal Marketing: A Systematic Review." <span class="pub-journal">Journal of Marketing Theory and Practice</span>, 1–15.</span></li>
-      <li><span class="pub-num">19</span><span class="pub-text">Boukis A. (2020). "A critical inquiry of the Internal Marketing discourse and a future research agenda." <span class="pub-journal">Journal of Customer Behavior</span>.</span></li>
-      <li><span class="pub-num">20</span><span class="pub-text">Gounaris S., Chryssochoidis G., Boukis A. (2020). "Internal Market Orientation, New Service Development teams and project success." <span class="pub-journal">European Journal of Marketing</span>, 54(7), 1641–1670.</span></li>
-      <li><span class="pub-num">21</span><span class="pub-text">Boukis A., Koritos C., Daunt K. L., Papastathopoulos A. (2020). "Effects of customer incivility on frontline employees." <span class="pub-journal">Tourism Management</span>, 77(1), 103997.</span></li>
-      <li><span class="pub-num">22</span><span class="pub-text">Chamakiotis P., Boukis A., Panteli N., Papadopoulos T. (2020). "The Role of Temporal Coordination for the Fuzzy Front-End of Innovation in Virtual Teams." <span class="pub-journal">International Journal of Information Management</span>, 50(2), 182–190.</span></li>
-      <li><span class="pub-num">23</span><span class="pub-text">Boukis A., Kabadayi S. (2020). "A classification of resources for employee-based value creation." <span class="pub-journal">European Management Journal</span>, 38(6), 863–873.</span></li>
-      <li><span class="pub-num">24</span><span class="pub-text">Kostopoulos I., Boukis A., Rodorfos G. (2019). "Perceived Service Complexity: Conceptualisation and Scale Development." <span class="pub-journal">Journal of Marketing Theory and Practice</span>, 27(1), 38–54.</span></li>
-      <li><span class="pub-num">25</span><span class="pub-text">Boukis A. (2020). "Exploring the implications of blockchain technology for brands and consumers." <span class="pub-journal">Journal of Product and Brand Management</span>, 29(3), 307–320.</span></li>
-      <li><span class="pub-num">26</span><span class="pub-text">Boukis A. (2019). "Internal Market Orientation as an internal value creation mechanism." <span class="pub-journal">Journal of Services Marketing</span>, 33(2), 233–244.</span></li>
-      <li><span class="pub-num">27</span><span class="pub-text">Boukis A., Yalkin C. (2019). "Customer Responses to Employee Deviance: A Conservation of Resources Perspective." <span class="pub-journal">Journal of Customer Behavior</span>.</span></li>
-      <li><span class="pub-num">28</span><span class="pub-text">Boukis A., Christodoulides G. (2018). "Investigating key antecedents and outcomes of Employee-Based Brand Equity." <span class="pub-journal">European Management Review</span>, 6(1), 1–14.</span></li>
-      <li><span class="pub-num">29</span><span class="pub-text">Boukis A., Gounaris S., Lings I. (2017). "Identifying determinants of employees' brand performance in interpersonal services." <span class="pub-journal">Journal of Services Marketing</span>, 31(7), 690–703.</span></li>
-      <li><span class="pub-num">30</span><span class="pub-text">Gounaris S., Chatzipanagiotou P., Boukis A., Perks H. (2016). "Unfolding the Recipes for Conflict Resolution during New Service Development." <span class="pub-journal">Journal of Business Research</span>, 69(10), 4042–4055.</span></li>
-      <li><span class="pub-num">31</span><span class="pub-text">Boukis A. (2016). "Achieving favourable customer outcomes through employee deviance." <span class="pub-journal">Services Industries Journal</span>, 36(7–8), 319–338.</span></li>
-      <li><span class="pub-num">32</span><span class="pub-text">Boukis A., Kaminakis K., Siampos A., Kostopoulos I. (2015). "Linking internal marketing with customer outcomes." <span class="pub-journal">Marketing Intelligence &amp; Planning</span>, 33(3), 394–413.</span></li>
-      <li><span class="pub-num">33</span><span class="pub-text">Boukis A., Gounaris S. (2014). "The importance of IMO for employees' fit with their environment." <span class="pub-journal">Journal of Services Marketing</span>, 28(1), 10–21.</span></li>
-      <li><span class="pub-num">34</span><span class="pub-text">Gounaris S., Boukis A. (2013). "The Role of Employee Job Satisfaction in strengthening Customer Repurchase Intentions." <span class="pub-journal">Journal of Services Marketing</span>, 27(4), 322–333.</span></li>
-      <li><span class="pub-num">35</span><span class="pub-text">Kostopoulos G., Gounaris S., Boukis A. (2012). "Antecedents of Service Blueprinting Effectiveness." <span class="pub-journal">Managing Service Quality</span>, 22(6), 580–591.</span></li>
-    </ol>
-  </section>
-
-  <!-- GRANTS -->
-  <section id="grants">
-    <div class="section-label">Funding</div>
-    <h2>Research Grants</h2>
-    <div class="grant-items">
-      <div class="grant-item">
-        <div class="grant-year-block">2025</div>
-        <div>
-          <div class="grant-title">IDAI Collision Grant: "Human Decision Making When Biased LLM Recommendations Are Made Explicit"</div>
-          <div class="grant-meta">University of Birmingham, UK</div>
-        </div>
-      </div>
-      <div class="grant-item">
-        <div class="grant-year-block">2019</div>
-        <div>
-          <div class="grant-title">"Consuming new forms of luxury in the sharing economy"</div>
-          <div class="grant-meta">UAE</div>
-        </div>
-      </div>
-      <div class="grant-item">
-        <div class="grant-year-block">2018</div>
-        <div>
-          <div class="grant-title">KTP Project: "Understanding the building blocks of employee-based brand equity in public sector organizations"</div>
-          <div class="grant-meta">UK</div>
-        </div>
-      </div>
-      <div class="grant-item">
-        <div class="grant-year-block">2015</div>
-        <div>
-          <div class="grant-title">"How organizational practices affect the well-being of service employees in the hospitality sector"</div>
-          <div class="grant-meta">Research Development Fund, UK</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AWARDS -->
-  <section id="awards">
-    <div class="section-label">Recognition</div>
-    <h2>Awards &amp; Memberships</h2>
-    <div class="award-grid">
-      <div class="award-item">
-        <div class="award-year">2025</div>
-        <div class="award-title">Affiliate, Institute for Data and AI, School of Computer Science, University of Birmingham</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2025</div>
-        <div class="award-title">Member, Research Working Group, UK Centre for Blockchain Technologies (UK CBT)</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2024</div>
-        <div class="award-title">Senior Fellowship in Higher Education</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2018</div>
-        <div class="award-title">The Harry Kroto Research Fellowship, Sussex University</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2016</div>
-        <div class="award-title">Nominated — "Research Active Faculty of the Year", Sussex University</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2016</div>
-        <div class="award-title">Fellowship in Higher Education</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2014</div>
-        <div class="award-title">Honourable Mention — ABTA Doctoral Awards, Social Sciences Category</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2014</div>
-        <div class="award-title">Highly Commended — Emerald/EFMD Outstanding Doctoral Research Awards (European Journal of Marketing)</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2013</div>
-        <div class="award-title">Research Scholarship, Department of Marketing, Strathclyde Business School</div>
-      </div>
-      <div class="award-item">
-        <div class="award-year">2012</div>
-        <div class="award-title">Best Competitive Paper Award, Annual Doctoral Research Conference in Marketing, Strathclyde University</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TEACHING -->
-  <section id="teaching">
-    <div class="section-label">Pedagogy</div>
-    <h2>Teaching Experience</h2>
-    <ul class="teaching-list">
-      <li><span class="teaching-year">2024</span><span>Strategic Marketing Communications (UG), University of Birmingham</span></li>
-      <li><span class="teaching-year">2023–</span><span>Marketing, Executive MBA; Research Methods, Aristotle University (Master)</span></li>
-      <li><span class="teaching-year">2022–26</span><span>Marketing Management (MBA); Strategic Branding (Master), University of Birmingham</span></li>
-      <li><span class="teaching-year">2021</span><span>International Marketing; International Marketing Context (Master), University of Birmingham</span></li>
-      <li><span class="teaching-year">2017–19</span><span>Research Methods (DBA), University of the West of Scotland</span></li>
-      <li><span class="teaching-year">2015–17</span><span>Research Methods (Master), University of Roehampton</span></li>
-      <li><span class="teaching-year">2014–15</span><span>Marketing Research (Executive Education), Birkbeck College</span></li>
-      <li><span class="teaching-year">2013–21</span><span>Marketing Research; Strategic Brand Management; Marketing Analytics; Services Marketing, University of Sussex</span></li>
-      <li><span class="teaching-year">2011–13</span><span>Teaching Assistant — Consumer Behaviour, Marketing Strategy, Services Marketing, Marketing Research, University of Strathclyde</span></li>
+    <div class="section-label">Publications</div>
+    <h2>Journal articles</h2>
+    <ul class="pub-list">
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2026</div></li>
+<li><span class="pub-num">36</span><span class="pub-text">Boukis, A. (2026). Consumers&#x27; asset monetization: A conceptual framework and research agenda. <span class="pub-journal">AMS Review</span><span class="inpress">In press</span>.</span></li>
+<li><span class="pub-num">35</span><span class="pub-text">Restuccia, M., Boukis, A., Hofacker, C., &amp; Acikgoz, F. (2026). Managing the product lifecycle of non-fungible tokens: A micro-level perspective. <span class="pub-journal">AMS Review</span>.</span></li>
+<li><span class="pub-num">34</span><span class="pub-text">Chatzipanagiotou, K., Christodoulides, G., Gounaris, S., Dalakoura, A., &amp; Boukis, A. (2026). Managing brand assets internally: Turning employees into an integral source of brand equity. <span class="pub-journal">British Journal of Management</span><span class="inpress">In press</span>.</span></li>
+<li><span class="pub-num">33</span><span class="pub-text">Boukis, A., Tsiotsou, R., &amp; Papastathopoulos, A. (2026). Unveiling the drivers of remote employees&#x27; intentions to use home as a service consumption hub: A configurational approach. <span class="pub-journal">Journal of Services Marketing</span><span class="inpress">In press</span>.</span></li>
+<li><span class="pub-num">32</span><span class="pub-text">Doherty, A. M., O&#x27;Malley, L., &amp; Boukis, A. (2026). Editorial: Marketing revolution: Reimagining theory and practice. <span class="pub-journal">European Journal of Marketing</span>, 60(3), 585–588.</span></li>
+<li><span class="pub-num">31</span><span class="pub-text">Boukis, A., &amp; Licsandru, T. (2026). Guest editorial: Understanding brand inclusivity. <span class="pub-journal">Journal of Product and Brand Management</span>, 35(2), 165–171.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2025</div></li>
+<li><span class="pub-num">30</span><span class="pub-text">Qiu, J., Boukis, A., &amp; Storey, C. (2025). Social capital creation through frontline employees&#x27; social media use and its effects on performance. <span class="pub-journal">European Journal of Marketing</span><span class="inpress">In press</span>.</span></li>
+<li><span class="pub-num">29</span><span class="pub-text">Boukis, A., Caruelle, D., &amp; Harris, L. (2025). Dealing with travel influencers: Opportunity or threat? <span class="pub-journal">Tourism Management</span>, 108, 105112.</span></li>
+<li><span class="pub-num">28</span><span class="pub-text">Boukis, A., &amp; Restuccia, M. (2025). Developing a strategic typology of non-fungible tokens (NFTs). <span class="pub-journal">Journal of Marketing Management</span>, 1–24.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2024</div></li>
+<li><span class="pub-num">27</span><span class="pub-text">Boukis, A. (2024). The effect of tokenized rewards on customer loyalty programs. <span class="pub-journal">Annals of Tourism Research</span>, 109, 103851.</span></li>
+<li><span class="pub-num">26</span><span class="pub-text">Boukis, A., Christodoulides, G., Semaan, R. W., &amp; Stathopoulou, A. (2024). What drives consumers towards shared luxury services? A comparison of sequential versus simultaneous sharing. <span class="pub-journal">Journal of Business Research</span>, 177, 114634.</span></li>
+<li><span class="pub-num">25</span><span class="pub-text">Boukis, A., Harris, L., &amp; Koritos, C. D. (2024). “Give me an upgrade or I will give you a bad review!” Investigating customer threats in the hospitality industry. <span class="pub-journal">Tourism Management</span>, 104, 104927.</span></li>
+<li><span class="pub-num">24</span><span class="pub-text">Semaan, R. W., Boukis, A., Christodoulides, G., &amp; Papastathopoulos, A. (2024). A typology of consumers sharing luxury services. <span class="pub-journal">Journal of Strategic Marketing</span>, 32(4), 536–550.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2023</div></li>
+<li><span class="pub-num">23</span><span class="pub-text">Boukis, A. (2023). Storytelling in initial coin offerings: Attracting investment or gaining referrals? <span class="pub-journal">Journal of Business Research</span>, 160, 113796.</span></li>
+<li><span class="pub-num">22</span><span class="pub-text">Boukis, A., Koritos, C., Papastathopoulos, A., &amp; Buhalis, D. (2023). Customer incivility as an identity threat for frontline employees: The mitigating role of organizational rewards. <span class="pub-journal">Annals of Tourism Research</span>, 100, 103555.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2022</div></li>
+<li><span class="pub-num">21</span><span class="pub-text">Boukis, A. (2022). Exploring the sources of consumer-based brand equity in the cryptocurrency market. <span class="pub-journal">Review of Marketing Science</span>, 20(1), 233–255.</span></li>
+<li><span class="pub-num">20</span><span class="pub-text">Tsiotsou, R., &amp; Boukis, A. (2022). In-home service consumption: A systematic review, integrative framework, and future research agenda. <span class="pub-journal">Journal of Business Research</span>, 145, 49–64.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2021</div></li>
+<li><span class="pub-num">19</span><span class="pub-text">Christodoulides, G., Athwal, N., Boukis, A., &amp; Semaan, R. W. (2021). New forms of luxury consumption in the sharing economy. <span class="pub-journal">Journal of Business Research</span>, 137, 89–99.</span></li>
+<li><span class="pub-num">18</span><span class="pub-text">Sibai, O., Mimoun, L., &amp; Boukis, A. (2021). Authenticating brand activism: Negotiating the boundaries of free speech to make a change. <span class="pub-journal">Psychology &amp; Marketing</span>, 38(10), 1651–1669.</span></li>
+<li><span class="pub-num">17</span><span class="pub-text">Boukis, A., Balmer, J. M. T., Punjaisri, K., &amp; Kaminakis, K. (2021). Unveiling frontline employees&#x27; brand construal types during corporate brand promise delivery: A multi-study analysis. <span class="pub-journal">Journal of Business Research</span>, 131, 673–685.</span></li>
+<li><span class="pub-num">16</span><span class="pub-text">Qiu, J., Boukis, A., &amp; Storey, C. (2021). Internal marketing: A systematic review. <span class="pub-journal">Journal of Marketing Theory and Practice</span>, 1–15.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2020</div></li>
+<li><span class="pub-num">15</span><span class="pub-text">Gounaris, S., Chryssochoidis, G., &amp; Boukis, A. (2020). Internal market orientation, the management of new service development teams and implications for project success. <span class="pub-journal">European Journal of Marketing</span>, 54(7), 1641–1674.</span></li>
+<li><span class="pub-num">14</span><span class="pub-text">Boukis, A., Koritos, C., Daunt, K. L., &amp; Papastathopoulos, A. (2020). Effects of customer incivility on frontline employees and the moderating role of supervisor leadership style. <span class="pub-journal">Tourism Management</span>, 77, 103997.</span></li>
+<li><span class="pub-num">13</span><span class="pub-text">Chamakiotis, P., Boukis, A., Panteli, N., &amp; Papadopoulos, T. (2020). The role of temporal coordination for the fuzzy front-end of innovation in virtual teams. <span class="pub-journal">International Journal of Information Management</span>, 50, 182–190.</span></li>
+<li><span class="pub-num">12</span><span class="pub-text">Boukis, A., &amp; Kabadayi, S. (2020). A classification of resources for employee-based value creation and a future research agenda. <span class="pub-journal">European Management Journal</span>, 38(6), 863–873.</span></li>
+<li><span class="pub-num">11</span><span class="pub-text">Boukis, A. (2020). Exploring the implications of blockchain technology for brands and consumers: A future research agenda. <span class="pub-journal">Journal of Product and Brand Management</span>, 29(3), 307–320.</span></li>
+<li><span class="pub-num">10</span><span class="pub-text">Boukis, A., &amp; Christodoulides, G. (2020). Investigating key antecedents and outcomes of employee-based brand equity. <span class="pub-journal">European Management Review</span>.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2019</div></li>
+<li><span class="pub-num">9</span><span class="pub-text">Kostopoulos, I., Boukis, A., &amp; Lodorfos, G. (2019). Perceived service complexity: Conceptualisation and scale development. <span class="pub-journal">Journal of Marketing Theory and Practice</span>, 27(1), 38–54.</span></li>
+<li><span class="pub-num">8</span><span class="pub-text">Boukis, A. (2019). Internal market orientation as an internal value creation mechanism. <span class="pub-journal">Journal of Services Marketing</span>, 33(2), 233–244.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2017</div></li>
+<li><span class="pub-num">7</span><span class="pub-text">Boukis, A., Gounaris, S., &amp; Lings, I. (2017). Identifying determinants of employees&#x27; brand performance in the delivery of interpersonal services. <span class="pub-journal">Journal of Services Marketing</span>, 31(7), 690–703.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2016</div></li>
+<li><span class="pub-num">6</span><span class="pub-text">Gounaris, S., Chatzipanagiotou, P., Boukis, A., &amp; Perks, H. (2016). Unfolding the recipes for conflict resolution during the new service development effort. <span class="pub-journal">Journal of Business Research</span>, 69(10), 4042–4055.</span></li>
+<li><span class="pub-num">5</span><span class="pub-text">Boukis, A. (2016). The role of employees&#x27; pro-customer deviance and customer&#x27;s participation for cognitive and affective customer responses. <span class="pub-journal">The Service Industries Journal</span>, 36(7–8), 319–338.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2015</div></li>
+<li><span class="pub-num">4</span><span class="pub-text">Boukis, A., Kaminakis, K., Siampos, A., &amp; Kostopoulos, I. (2015). Linking internal marketing with customer outcomes. <span class="pub-journal">Marketing Intelligence &amp; Planning</span>, 33(3), 394–413.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2014</div></li>
+<li><span class="pub-num">3</span><span class="pub-text">Boukis, A., &amp; Gounaris, S. (2014). The importance of internal market orientation for employees&#x27; fit with their environment and reciprocal behaviors towards the firm. <span class="pub-journal">Journal of Services Marketing</span>, 28(1), 10–21.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2013</div></li>
+<li><span class="pub-num">2</span><span class="pub-text">Gounaris, S., &amp; Boukis, A. (2013). The role of employee job satisfaction in strengthening customer repurchase intentions. <span class="pub-journal">Journal of Services Marketing</span>, 27(4), 322–333.</span></li>
+<li class="pub-year-row" style="display:block;border:none;padding:0"><div class="pub-year-label">2012</div></li>
+<li><span class="pub-num">1</span><span class="pub-text">Kostopoulos, G., Gounaris, S., &amp; Boukis, A. (2012). Antecedents of service blueprinting effectiveness and the moderating role of service characteristics: An empirical study. <span class="pub-journal">Managing Service Quality</span>, 22(6), 580–591.</span></li>
     </ul>
-
-    <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.2rem; color:var(--navy); margin-top:40px; margin-bottom:16px;">Education &amp; Research Roles</h3>
-    <ul class="teaching-list">
-      <li><span class="teaching-year">2025</span><span>Head of the PhD Programme, Department of Marketing, University of Birmingham</span></li>
-      <li><span class="teaching-year">2022</span><span>Director of M.Sc. in Marketing, University of Birmingham</span></li>
-      <li><span class="teaching-year">2019–21</span><span>Course Director, B.Sc. in Marketing &amp; Management</span></li>
-      <li><span class="teaching-year">2021</span><span>Lead Tutor, Department of Marketing, University of Birmingham</span></li>
-      <li><span class="teaching-year">2016–19</span><span>Deputy Course Director, B.Sc. in Marketing &amp; Management</span></li>
-      <li><span class="teaching-year">Ongoing</span><span>External Examiner — Loughborough University, Coventry University, Southampton University, Deree College (Greece)</span></li>
+    <h3 class="sub-h">Book chapters</h3>
+    <ul class="pub-list">
+<li><span class="pub-num">1</span><span class="pub-text">Boukis, A. (2024). Internal marketing. In <span class="pub-journal">Elgar Encyclopedia of Corporate Communication</span> (pp. 343–346. Edward Elgar.)</span></li><li><span class="pub-num">2</span><span class="pub-text">Boukis, A. (2015). Managing innovation within organizations. In <span class="pub-journal">Product Innovation through Knowledge Management and Social Media Strategies</span> (pp. 266–290. IGI Global.)</span></li>
+    </ul>
+    <h3 class="sub-h">Under review</h3>
+    <ul class="pub-list">
+<li><span class="pub-num">1</span><span class="pub-text">Boukis, A., Qionglei, Y., &amp; Brannan, A. Unintended consequences of DEI announcements for service employees. <span class="pub-journal">British Journal of Management</span> <span class="inpress">2nd round</span></span></li><li><span class="pub-num">2</span><span class="pub-text">Lages, C., Sands, S., Boukis, A., &amp; Hollebeek, L. Dual pathway to service recovery outcomes: How AI (vs human) agents shape industrial customers&#x27; responses to service failures. <span class="pub-journal">Industrial Marketing Management</span> <span class="inpress">2nd round</span></span></li><li><span class="pub-num">3</span><span class="pub-text">Boukis, A., Christodoulides, G., &amp; Zarantonello, L. Experiential consumption in international markets: A systematic literature review. <span class="pub-journal">International Marketing Review</span> <span class="inpress">2nd round</span></span></li><li><span class="pub-num">4</span><span class="pub-text">Qiu, J., Boukis, A., &amp; Storey, C. Service employees&#x27; synchronous and asynchronous social media communications with customers: Performance effects and limitations. <span class="pub-journal">Journal of Strategic Marketing</span> <span class="inpress">3rd round</span></span></li><li><span class="pub-num">5</span><span class="pub-text">Ibrahim, F., Wang, J., &amp; Boukis, A. How do AI announcements affect frontline employee role responses and reward preferences? <span class="pub-journal">Tourism Management</span> <span class="inpress">1st round</span></span></li>
     </ul>
   </section>
 
-  <!-- CONFERENCES -->
   <section id="conferences">
-    <div class="section-label">Academic Engagement</div>
-    <h2>Conference Publications</h2>
+    <div class="section-label">Publications</div>
+    <h2>Conference papers</h2>
+    <p class="note" style="margin-top:-12px">Select a year to expand.</p>
+<details class="conf" open><summary>2026<span class="count">2 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Ibrahim, F., Wang, J., &amp; Boukis, A. The effect of different AI announcement types on frontline employees. <em>AMA SERVSIG, Braga, Portugal</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Huang, X., Nazifi, A., &amp; Boukis, A. Do green AI recommendations affect sustainable tourism behavior? <em>AMA SERVSIG, Braga, Portugal</em>.</span></li></ul></details>
+<details class="conf" open><summary>2025<span class="count">2 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Qionglei, Y. Frontline employee responses to EDI policy announcements. <em>Academy of Marketing Science Annual Conference, Montreal, Canada</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Caruelle, D., &amp; Harris, L. Framing matters: Firm responses to influencer collaboration requests. <em>Academy of Marketing Science Annual Conference, Montreal, Canada</em>.</span></li></ul></details>
+<details class="conf"><summary>2024<span class="count">2 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A. Do NFTs add value to customer reward schemes? <em>EMAC Annual Conference, Bucharest, Romania</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A. Do NFTs enhance customer perceptions of luxury hotels&#x27; reward schemes? <em>AMA SERVSIG, Kedge Business School, Bordeaux, France</em>.</span></li></ul></details>
+<details class="conf"><summary>2023<span class="count">4 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Restuccia, M. A classification of NFTs. <em>Academy of Marketing Conference, Birmingham, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A. How do storytelling strategies impact the launch of new cryptos? <em>Academy of Marketing Conference, Birmingham, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Chatzipanagiotou, K., Christodoulides, G., Gounaris, S., &amp; Boukis, A. Unravelling the employee-based brand equity formation process. <em>Academy of Marketing Science Annual Conference, New Orleans, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Christodoulides, G., Semaan, R., &amp; Stathopoulou, A. What motivates the consumption of shared luxury services? The case of sequential vs. simultaneous sharing. <em>Monaco Symposium on Luxury, Monaco</em>.</span></li></ul></details>
+<details class="conf"><summary>2022<span class="count">6 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A. Understanding consumer-based brand equity in the crypto market. <em>EMAC Regional Conference, Kaunas, Lithuania</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Koritos, C., Papastathopoulos, A., &amp; Buhalis, D. How do organizational rewards affect service employees&#x27; coping with customer-induced identity threats? <em>AMA SERVSIG, Glasgow, UK — Best Paper Award</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Harris, L., Boukis, A., &amp; Harfield, C. How do consumers threaten service organizations? <em>AMA SERVSIG, Glasgow, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Qiu, J., Boukis, A., &amp; Storey, C. How service organisations create value for customers through social media use. <em>AMA SERVSIG, Glasgow, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Tsiotsou, R., &amp; Boukis, A. Home as a consumption hub: A conceptual model. <em>Frontiers in Service Conference, Boston, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A. In-home service consumption: What do we know so far? <em>ICCMI, Naxos, Greece</em>.</span></li></ul></details>
+<details class="conf"><summary>2020<span class="count">2 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Sibai, O., Mimoun, L., &amp; Boukis, A. Activism: Taking a stand by walking the line of moral controversy. <em>EGOS Colloquium, Hamburg, Germany</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Christodoulides, G., Boukis, A., &amp; Semaan, R. An exploratory investigation into new forms of shared luxury. <em>Monaco Symposium on Luxury, Monaco</em>.</span></li></ul></details>
+<details class="conf"><summary>2019<span class="count">2 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., Daunt, K., Koritos, C., &amp; Papastathopoulos, A. How can supervisors help frontline employees deal with customer mistreatment? <em>Academy of Marketing Science Annual Conference, Vancouver, Canada</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Christodoulides, G., &amp; Siamagka, N. How can blockchain technology affect consumer–brand relationships in global markets? (Interactive session). <em>AMA Special Interest Group Conference, Buenos Aires, Argentina</em>.</span></li></ul></details>
+<details class="conf"><summary>2018<span class="count">6 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., Baruca, A., &amp; Ulusoy, E. A look into the (not so) bright side of life: An exploration of the negative service encounter and its effect on the next customer. <em>Academy of Marketing Science Annual Conference, New Orleans, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A. A typology of resources for internal value creation: A service logic perspective. <em>EMAC Annual Conference, Glasgow, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Kabadayi, S. Delving into the role of different resources for value creation in the internal market. <em>AMA SERVSIG, Paris, France</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Magrizos, S. Managing brands in the blockchain era. <em>Annual Macromarketing Conference, Leipzig, Germany</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Chryssochoidis, G., Gounaris, S., &amp; Boukis, A. Internal market orientation adoption: Why and how it is important for new service development. <em>EMAC Annual Conference, Glasgow, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Punjaisri, K., Balmer, J. M. T., &amp; Kaminakis, K. Brand identification modes of frontline employees through the social identity lens: The corporate brand perspective. <em>20th International Corporate Identity Group Symposium, Bled, Slovenia</em>.</span></li></ul></details>
+<details class="conf"><summary>2017<span class="count">1 paper</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., Kaminakis, K., Papastathopoulos, A., Punjaisri, K., &amp; Balmer, J. M. T. How do different types of frontline employees deliver the brand to consumers? <em>Academy of Marketing Science Annual Conference, San Diego, USA</em>.</span></li></ul></details>
+<details class="conf"><summary>2016<span class="count">4 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Chatzipanagiotou, P., Gounaris, S., Boukis, A., &amp; Perks, H. Applying fuzzy-set qualitative comparative analysis to conflict resolution during new service development. <em>Global Marketing Conference, Hong Kong</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Chatzipanagiotou, P. Legitimate customer consequences deriving from customer-oriented deviance. <em>Global Marketing Conference, Hong Kong</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A. Different types of employee deviance and customer response towards the employee and the organization. <em>Academy of Marketing Science Annual Conference, Orlando, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Chamakiotis, P., Boukis, A., &amp; Panteli, N. The fuzzy front-end of innovation in temporary virtual project teams. <em>10th Mediterranean Conference on Information Systems (MCIS), Paphos, Cyprus</em>.</span></li></ul></details>
+<details class="conf"><summary>2015<span class="count">2 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Christodoulides, G. Key antecedents and outcomes of employee-based brand equity. <em>Academy of Marketing Science Annual Conference, Denver, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Siamagka, N., Tabassum, F., &amp; Kastanakis, M. Front-line employee deviance, encounter satisfaction and customer citizenship behavior: An experimental design. <em>Academy of Marketing Science Annual Conference, Denver, USA</em>.</span></li></ul></details>
+<details class="conf"><summary>2014<span class="count">5 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A. Conflict management styles and NSD project performance under different types of conflict. <em>EMAC Annual Conference, Valencia, Spain</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Kaminakis, K., Gounaris, S., Karantinou, K., &amp; Boukis, A. Social values and bandwagon motivations in the context of luxury consumption. <em>EMAC Annual Conference, Valencia, Spain</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Kostopoulos, G., Lodorfos, G., &amp; Boukis, A. Re-examining the influence of service delivery system effectiveness on perceived service quality. <em>EMAC Annual Conference, Valencia, Spain</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Gounaris, S. Knowledge management strategies and internal dynamics as drivers of various NSD project outcomes. <em>Global Marketing Conference, Singapore</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Gounaris, S., &amp; Lings, I. Identifying determinants of employees&#x27; brand performance in the delivery of interpersonal services. <em>Global Marketing Conference, Singapore</em>.</span></li></ul></details>
+<details class="conf"><summary>2013<span class="count">4 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., Katsaridou, I., &amp; Kaminakis, K. Linking IMO with different fit types and willingness to report service complaints. <em>Academy of Marketing Science Annual Conference, Monterey, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Siampos, T. IMO and different fit types as key enablers of employee brand-supporting behavior. <em>Edinburgh Business School, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A. Conflict management styles and NSD project performance under different types of conflict. <em>Doctoral Research Conference in Marketing, University of Strathclyde, Glasgow, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Kaminakis, K. Exploring the fuzzy front-end of new service development performance. <em>IC-SIM Conference, Prague, Czech Republic</em>.</span></li></ul></details>
+<details class="conf"><summary>2012<span class="count">5 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., Gounaris, S., Kostopoulos, G., &amp; Kaminakis, K. IMO diffusion, employee outcomes and perceived service quality. <em>Academy of Marketing Science Annual Conference, New Orleans, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A. Identifying some benefits from internal market orientation adoption for new service development. <em>Doctoral Research Conference in Marketing, University of Strathclyde, Glasgow, UK</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Kaminakis, K., &amp; Lionakis, K. Some employee-level benefits from managers&#x27; IMO adoption. <em>Academy of Marketing Science Annual Conference, New Orleans, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Kaminakis, K., &amp; Boukis, A. Highlighting the role of servicescapes and organizational climate on employees&#x27; performance. <em>Academy of Marketing Science Annual Conference, New Orleans, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Gounaris, S., Lionakis, K., &amp; Kaminakis, K. The importance of store managers&#x27; IMO for contact employees&#x27; extra-role performance. <em>EMAC Annual Conference, Lisbon, Portugal</em>.</span></li></ul></details>
+<details class="conf"><summary>2011<span class="count">8 papers</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., Gounaris, S., &amp; Kostopoulos, G. Incorporating employee behavior in a customer retention model. <em>AMA Winter Marketing Academic Conference, Texas, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Gounaris, S., &amp; Boukis, A. Some preliminary evidence for the effect of employee satisfaction on relational switching costs. <em>Academy of Marketing Science Conference, Florida, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Gounaris, S., &amp; Kostopoulos, G. A multilevel investigation of the effect of employee satisfaction on customer outcomes in a financial services context. <em>Academy of Marketing Science Conference, Reims, France</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Gounaris, S., &amp; Kaminakis, K. Customer contact employees&#x27; role in affecting customer switching. <em>EMAC Annual Conference, Ljubljana, Slovenia</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Gounaris, S. Highlighting the role of IMO for intra-organizational relationships and NSD performance. <em>American Marketing Association Conference, San Francisco, USA</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Gounaris, S. The role of IMO for NSD performance. <em>Biennial Services Conference, Izmir, Turkey</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Gounaris, S., Kostopoulos, G., &amp; Boukis, A. Defining service blueprinting effectiveness: An empirical approach. <em>Biennial Services Conference, Izmir, Turkey</em>.</span></li>
+<li><span class="conf-bullet">·</span><span>Boukis, A., Kaminakis, K., &amp; Gounaris, S. A multilevel investigation of store managers&#x27; IMO adoption for enhancing contact employees&#x27; behaviours and customer-perceived service quality. <em>Biennial Services Conference, Izmir, Turkey</em>.</span></li></ul></details>
+<details class="conf"><summary>2010<span class="count">1 paper</span></summary><ul class="conf-list"><li><span class="conf-bullet">·</span><span>Boukis, A., &amp; Gounaris, S. The effect of culture on internal marketing and the moderating effect of employee resistance on the internal marketing–employee satisfaction relationship. <em>EMAC Annual Conference, Copenhagen, Denmark</em>.</span></li></ul></details>
+  </section>
 
-    <div class="conf-year">2026</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Ibrahim F., Wang W., Boukis A. "The effect of different AI announcement types on frontline employees." SERVSIG 2026, Braga, Portugal.</span></li>
-      <li><span class="conf-bullet">—</span><span>Huang X., Nazifi A., Boukis A. "Do Green AI Recommendations affect sustainable tourism behavior?" SERVSIG 2026, Braga, Portugal.</span></li>
+  <section id="leadership">
+    <div class="section-label">Leadership &amp; Service</div>
+    <h2>Leadership &amp; service</h2>
+    <div class="editorial-grid">
+      <div class="editorial-block"><h3>Academic leadership</h3><ul>
+        <li>Head of the PhD Programme, Department of Marketing, University of Birmingham (2025–present)</li>
+        <li>Lead Programme Director, EQUIS Reaccreditation, Birmingham Business School (2024)</li>
+        <li>Programme Director, MSc Marketing, University of Birmingham (2022–2025)</li>
+        <li>Head Tutor, Department of Marketing, University of Birmingham (2021–2022)</li>
+        <li>Course Director, BSc Marketing &amp; Management with Psychology, University of Sussex (2019–2021)</li>
+        <li>Course Director, BSc Marketing &amp; Management, University of Sussex (2016–2019)</li>
+        <li>REF Output Review Panel, Birmingham Business School (2024–present)</li>
+      </ul></div>
+      <div class="editorial-block"><h3>Editorial roles</h3><ul>
+        <li><span class="badge">AE</span><em>Journal of Service Theory and Practice</em> (2025–)</li>
+        <li><span class="badge">AE</span><em>Review of Marketing Science</em> (2024–)</li>
+        <li><span class="badge">AE</span><em>Journal of Strategic Marketing</em> (2023–)</li>
+        <li><span class="badge">Board</span><em>International Journal of Consumer Studies</em> (2026–)</li>
+        <li><span class="badge">Board</span><em>Tourism Management</em> (2024–)</li>
+        <li><span class="badge">Board</span><em>Italian Journal of Marketing</em> (2023–)</li>
+        <li><span class="badge">Board</span><em>Journal of Product and Brand Management</em> (2022–)</li>
+      </ul></div>
+    </div>
+
+    <h3 class="sub-h">Special issues &amp; guest editorials</h3>
+    <div class="cards">
+      <div class="card"><div class="card-year">2027 · Ongoing</div><div class="card-title">Engaging industrial customers with AI-enabled service recovery</div><div class="card-meta"><em>Industrial Marketing Management</em></div></div>
+      <div class="card"><div class="card-year">2026 · Ongoing</div><div class="card-title">Sustainable luxury tourism: Opportunities, tensions, and impacts</div><div class="card-meta"><em>Journal of Sustainable Tourism</em></div></div>
+      <div class="card"><div class="card-year">2026 · Ongoing</div><div class="card-title">Beyond goods: The rise of experiential consumption in international/global markets</div><div class="card-meta"><em>International Marketing Review</em></div></div>
+      <div class="card"><div class="card-year">2025</div><div class="card-title">Exploring consumers' journey from physical ownership to digital assets</div><div class="card-meta"><em>Journal of Consumer Behaviour</em></div></div>
+      <div class="card"><div class="card-year">2025</div><div class="card-title">Understanding brand inclusivity</div><div class="card-meta"><em>Journal of Product and Brand Management</em></div></div>
+      <div class="card"><div class="card-year">2024</div><div class="card-title">Reimagining theory and practice</div><div class="card-meta"><em>European Journal of Marketing</em> · Academy of Marketing Conference 2023</div></div>
+    </div>
+
+    <div class="editorial-grid" style="margin-top:48px">
+      <div class="editorial-block"><h3>Conference roles</h3><ul>
+        <li>Track Chair, Social Media Marketing — Academy of Marketing Science Annual Conference, La Jolla (2027)</li>
+        <li>Track Chair, Services Automation — AMA SERVSIG, Braga, Portugal (2026)</li>
+        <li>Conference Workshop Chair — Academy of Marketing, Birmingham, UK (2023)</li>
+        <li>Track Chair, Services Marketing — Academy of Marketing Science Annual Conference, Vancouver, Canada (2019)</li>
+        <li>Track Chair, Consumer Ethics &amp; CSR — EMAC, Glasgow, UK (2018)</li>
+      </ul></div>
+      <div class="editorial-block"><h3>Doctoral supervision &amp; examining</h3><ul>
+        <li>PhD supervision — 3 completions, 4 current students (blockchain UX, social media in organisations, brand equity for influencers)</li>
+        <li>DBA supervision — 6 completions (University of the West of Scotland)</li>
+        <li>PhD examinations — 3 external, 2 internal; 1 external MRes examination; 1 viva chair</li>
+      </ul></div>
+    </div>
+
+    <div class="editorial-grid" style="margin-top:48px">
+      <div class="editorial-block"><h3>External examiner roles</h3><ul>
+        <li>University of Southampton (2023–2027)</li>
+        <li>Loughborough University (2022–2026)</li>
+        <li>Deree – The American College of Greece, Chief External Examiner (2021–2025)</li>
+        <li>Coventry University (2019–2023)</li>
+      </ul></div>
+      <div class="editorial-block"><h3>Grant reviewing &amp; memberships</h3><ul>
+        <li>Grant reviewer, Social Sciences and Humanities Research Council of Canada (2024–)</li>
+        <li>Grant reviewer, Swiss National Science Foundation (2023–)</li>
+        <li>Affiliate Member, Institute for Data &amp; AI, University of Birmingham (2025–)</li>
+        <li>Member, Research Working Group, UK Centre for Blockchain Technologies</li>
+      </ul></div>
+    </div>
+
+    <h3 class="sub-h">Ad hoc reviewing</h3>
+    <p class="note" style="margin:-6px 0 12px">185+ journal reviews and 18+ conference reviews (EMAC, AMS, AMA SERVSIG). Best Reviewer Award, <em>Journal of Service Theory and Practice</em> (2024).</p>
+    <p style="font-size:0.88rem;line-height:1.8;color:#3a3530;max-width:760px"><em>Journal of Retailing</em> · <em>Journal of Service Research</em> · <em>Journal of Business Research</em> · <em>International Journal of Research in Marketing</em> · <em>British Journal of Management</em> · <em>Annals of Tourism Research</em> · <em>Journal of Service Management</em> · <em>International Marketing Review</em> · <em>Psychology &amp; Marketing</em> · <em>European Journal of Marketing</em> · <em>Journal of Services Marketing</em> · <em>International Journal of Hospitality Management</em> · <em>Journal of Marketing Theory and Practice</em> · <em>Industrial Marketing Management</em> · <em>Journal of Marketing Management</em> · <em>Marketing Intelligence &amp; Planning</em> · and others</p>
+  </section>
+
+  <section id="grants">
+    <div class="section-label">Recognition</div>
+    <h2>Grants &amp; awards</h2>
+    <h3 class="sub-h">Research grants</h3>
+    <p class="note" style="margin:-6px 0 20px">Over £158,000 in external, industry and internal research funding.</p>
+    <div class="grant-items"><div class="grant-item"><div class="grant-year-block">Current</div><div><div class="grant-title">Youth Mental Health Collision Grant (Co-I) — AI use and mental health needs among young people aged 18–25</div><div class="grant-meta">£19,100 · 14 collaborators</div></div></div>
+<div class="grant-item"><div class="grant-year-block">2025</div><div><div class="grant-title">Ripple / UK Centre for Blockchain Technologies (Co-I) — User experience on blockchain-enabled platforms</div><div class="grant-meta">£70,000 · Industry funding · with University of Oxford and UCL</div></div></div>
+<div class="grant-item"><div class="grant-year-block">2024</div><div><div class="grant-title">Birmingham Business School (PI) — DEI storytelling strategies in workplace campaigns</div><div class="grant-meta">£2,980 · Internal grant</div></div></div>
+<div class="grant-item"><div class="grant-year-block">2021</div><div><div class="grant-title">Birmingham Business School (PI) — Perceived scarcity and authenticity in the NFT market</div><div class="grant-meta">£1,518 · Internal grant</div></div></div>
+<div class="grant-item"><div class="grant-year-block">2019</div><div><div class="grant-title">Chalhoub Group (Co-I) — Sharing economy implications for luxury markets</div><div class="grant-meta">£59,830 · Industry funding · with Kedge Business School and American University of Sharjah</div></div></div>
+<div class="grant-item"><div class="grant-year-block">2018</div><div><div class="grant-title">Research Development Fund (PI) — New forms of labour in the sharing economy</div><div class="grant-meta">£5,300 · University of Sussex</div></div></div></div>
+    <h3 class="sub-h">Honours &amp; awards</h3>
+    <div class="award-grid"><div class="award-item"><div class="award-year">2024</div><div class="award-title">Best Reviewer Award, Journal of Service Theory and Practice</div></div>
+<div class="award-item"><div class="award-year">2024</div><div class="award-title">Senior Fellow of the Higher Education Academy (SFHEA)</div></div>
+<div class="award-item"><div class="award-year">2022</div><div class="award-title">Best Paper Award, AMA SERVSIG Conference, Glasgow</div></div>
+<div class="award-item"><div class="award-year">2018</div><div class="award-title">Harry Kroto Research Fellowship, University of Sussex</div></div>
+<div class="award-item"><div class="award-year">2016</div><div class="award-title">Nominated, Research Active Faculty of the Year, University of Sussex</div></div>
+<div class="award-item"><div class="award-year">2014</div><div class="award-title">Highly Commended, Emerald/EFMD Outstanding Doctoral Research Awards</div></div>
+<div class="award-item"><div class="award-year">2014</div><div class="award-title">Honourable Mention for PhD thesis, ABTA Awards</div></div>
+<div class="award-item"><div class="award-year">2013</div><div class="award-title">Research Scholarship, Department of Marketing, Strathclyde Business School</div></div>
+<div class="award-item"><div class="award-year">2012–2013</div><div class="award-title">Travel Grant, Academy of Marketing Science Conference</div></div>
+<div class="award-item"><div class="award-year">2012</div><div class="award-title">Best Competitive Paper, Annual Doctoral Research Conference in Marketing, University of Strathclyde</div></div>
+<div class="award-item"><div class="award-year">2009–2012</div><div class="award-title">Annual Research Scholarship, Athens University of Economics and Business</div></div></div>
+  </section>
+
+  <section id="teaching">
+    <div class="section-label">Teaching</div>
+    <h2>Teaching</h2>
+    <div class="bio-text"><p>I teach marketing research, branding and services marketing at every level, from undergraduate to MBA, PhD and DBA. My teaching is interactive and dialogical: I connect theory to real business cases and challenge students' assumptions to build critical thinking. I also have extensive experience in programme leadership, curriculum design, and online and hybrid delivery.</p></div>
+    <h3 class="sub-h">University of Birmingham (2021–present)</h3>
+    <ul class="teaching-list"><li><span class="teaching-year">Executive MBA</span><span>Marketing (Singapore)</span></li>
+<li><span class="teaching-year">MBA</span><span>Marketing Management</span></li>
+<li><span class="teaching-year">MSc</span><span>Strategic Brand Management (MSc Marketing)</span></li>
+<li><span class="teaching-year">MSc</span><span>International Marketing, including Singapore campus delivery</span></li>
+<li><span class="teaching-year">All levels</span><span>Dissertation supervision — undergraduate, master's and MBA</span></li></ul>
+    <h3 class="sub-h">University of Sussex (2013–2021)</h3>
+    <ul class="teaching-list"><li><span class="teaching-year">Module Leader</span><span>Marketing Research (Master's &amp; Undergraduate) · Strategic Brand Management (Undergraduate) · Marketing Analytics &amp; Metrics (Online) · Services Marketing (Undergraduate)</span></li></ul>
+    <h3 class="sub-h">Other institutions</h3>
+    <ul class="teaching-list"><li><span class="teaching-year">2017–2018, 2022</span><span>Research Methods (DBA), University of the West of Scotland</span></li>
+<li><span class="teaching-year">2015–2018</span><span>Marketing Management (Postgraduate, online), University of Roehampton</span></li>
+<li><span class="teaching-year">2015–2016</span><span>Marketing Research (Executive Education), Birkbeck, University of London</span></li>
+<li><span class="teaching-year">2011–2013</span><span>Teaching Assistant, University of Strathclyde — Consumer Behaviour, Marketing Strategy, Services Marketing</span></li></ul>
+    <p class="note" style="margin:20px 0 0">Student satisfaction scores of 3.85–4.40 out of 5 across modules. Dissertation supervision also at King's College London, Birkbeck, Newcastle University and Brunel University.</p>
+  </section>
+
+  <section id="media">
+    <div class="section-label">Engagement</div>
+    <h2>Talks &amp; media</h2>
+    <h3 class="sub-h">Keynote &amp; invited talks</h3>
+    <div class="cards"><div class="card"><div class="card-year">2024 · Keynote</div><div class="card-title">3rd Marketing, Innovation &amp; Digital Transformation Conference</div><div class="card-meta">Newcastle University, UK</div></div><div class="card"><div class="card-year">2024</div><div class="card-title">Newcastle University</div><div class="card-meta">UK</div></div><div class="card"><div class="card-year">2023–2024</div><div class="card-title">Liverpool John Moores University</div><div class="card-meta">UK</div></div><div class="card"><div class="card-year">2023</div><div class="card-title">Aristotle University of Thessaloniki</div><div class="card-meta">Greece</div></div><div class="card"><div class="card-year">2020–2021</div><div class="card-title">University of Sharjah</div><div class="card-meta">UAE</div></div><div class="card"><div class="card-year">2019–2021</div><div class="card-title">Bilkent University</div><div class="card-meta">Turkey</div></div><div class="card"><div class="card-year">2016</div><div class="card-title">Zagreb School of Economics and Management</div><div class="card-meta">Croatia</div></div><div class="card"><div class="card-year">2015</div><div class="card-title">Queensland University of Technology</div><div class="card-meta">Australia</div></div></div>
+    <h3 class="sub-h">Articles in English</h3>
+    <ul class="press-list">
+<li><span class="pub-num">1</span><span><a href="https://blog.bham.ac.uk/socialsciencesbirmingham/2025/02/05/the-dei-trilemma-progress-pushback-or-quiet-compliance/" target="_blank" rel="noopener">The DEI trilemma: Progress, pushback, or quiet compliance?</a> — Social Sciences Birmingham blog, 2025</span></li>
+<li><span class="pub-num">2</span><span><a href="https://blog.bham.ac.uk/socialsciencesbirmingham/2024/12/02/jaguar-rebranding-a-wilful-controversy-or-a-strategic-misstep/" target="_blank" rel="noopener">Jaguar rebranding: A wilful controversy or a strategic misstep?</a> — Social Sciences Birmingham blog, 2024</span></li>
+<li><span class="pub-num">3</span><span><a href="https://theconversation.com/nfts-how-top-brands-like-nike-and-prada-are-using-them-and-what-could-go-wrong-182446" target="_blank" rel="noopener">NFTs: How top brands like Nike and Prada are using them – and what could go wrong</a> — <em>The Conversation</em>, 2022 · republished in translation by <a href="https://bigissue-online.jp/archives/1080583072.html"><em>The Big Issue Japan</em></a></span></li>
+<li><span class="pub-num">4</span><span><a href="https://www.businessleader.co.uk/should-ceos-become-the-moral-voice-of-corporates/76787/" target="_blank" rel="noopener">Should CEOs become the moral voice of corporates?</a> — <em>Business Leader</em>, 2020</span></li>
+<li><span class="pub-num">5</span><span><a href="https://www.businessleader.co.uk/jack-of-all-trades-why-twitter-ceo-needs-to-put-aside-his-personal-ambitions-and-focus-on-innovation-to-halt-the-decline-of-his-social-media-behemoth/70572/" target="_blank" rel="noopener">Jack of all trades? Why Twitter&#x27;s CEO needs to put aside his personal ambitions and focus on innovation</a> — <em>Business Leader</em>, 2021</span></li>
+<li><span class="pub-num">6</span><span><a href="https://hbrarabic.com/?p=101930" target="_blank" rel="noopener">How can supervisors help their frontline staff cope with customer incivility episodes?</a> — <em>Harvard Business Review Arabia</em>, 2019 · with K. Daunt, C. Koritos &amp; A. Papastathopoulos</span></li>
     </ul>
-
-    <div class="conf-year">2025</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Boukis A., Qionglei Y. "Frontline employee responses to EDI policy announcements." AMS Conference, Montreal, Canada.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A., Caruelle D., Harris L. "Framing matters: Firm responses to influencer collaboration requests." AMS Conference, Montreal, Canada.</span></li>
-    </ul>
-
-    <div class="conf-year">2024</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Boukis A. "Do NFTs add value to customer reward schemes?" EMAC Annual Conference, Bucharest.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A. "Do NFTs enhance customer perceptions of luxury hotels' reward schemes?" AMA SERVSIG, Kedge Business School, Bordeaux.</span></li>
-    </ul>
-
-    <div class="conf-year">2023</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Boukis A., Restuccia M. "A classification of NFTs." Academy of Marketing 2023, Birmingham, UK.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A. "How do storytelling strategies impact the launch of new cryptos?" Academy of Marketing 2023, Birmingham, UK.</span></li>
-      <li><span class="conf-bullet">—</span><span>Chatzipanagiotou K., Christodoulides G., Gounaris S., Boukis A. "Unravelling the employee-based brand equity formation process." 48th AMS Annual Conference, New Orleans.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A., Christodoulides C., Semaan R., Stathopoulou A. "What Motivates the Consumption of Shared Luxury Services?" Monaco Symposium on Luxury 2023.</span></li>
-    </ul>
-
-    <div class="conf-year">2022</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Boukis A. "Understanding consumer-based brand equity in the crypto market." Regional EMAC, Kaunas, Lithuania.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A., Koritos C., Papastathopoulos A., Buhalis D. "How do organizational rewards affect service employees' coping with customer-induced identity threats?" Servsig, Glasgow, UK.</span></li>
-      <li><span class="conf-bullet">—</span><span>Harris L., Boukis A., Harfield C. "How do consumers threaten service organizations?" Servsig, Glasgow, UK.</span></li>
-      <li><span class="conf-bullet">—</span><span>Qiu J., Boukis A., Storey C. "How Service Organisations Create Value through Social Media Use?" Servsig, Glasgow, 2022.</span></li>
-      <li><span class="conf-bullet">—</span><span>Tsiotsou S., Boukis A. "Home as a Consumption Hub: A Conceptual Model." Service Frontiers, Boston, 2022.</span></li>
-    </ul>
-
-    <div class="conf-year">2020</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Sibai O., Mimoun L., Boukis A. "Activism: Taking a Stand by Walking the Line of Moral Controversy." EGOS Conference, Hamburg.</span></li>
-      <li><span class="conf-bullet">—</span><span>Christodoulides C., Boukis A., Semaan R. "An Exploratory Investigation into New Forms of Shared Luxury." Monaco Symposium on Luxury, Monaco.</span></li>
-    </ul>
-
-    <div class="conf-year">2019</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Boukis A., Daunt K., Koritos C., Papastathopoulos A. "How can supervisors help frontline employees deal with customer mistreatment?" AMS Annual Conference, Vancouver, Canada.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A., Christodoulides G., Siamagka N. "How can Blockchain Technology affect consumer-brand relationships in global markets?" AMA SIG, Buenos Aires, Argentina.</span></li>
-    </ul>
-
-    <div class="conf-year">2018</div>
-    <ul class="conf-list">
-      <li><span class="conf-bullet">—</span><span>Boukis A., Baruca A., Ulusoy E. "A look into the (not so) bright side of life: negative service encounters and the next customer." AMS Annual Conference, New Orleans.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A. "A typology of resources for internal value creation; A service logic perspective." EMAC, Glasgow.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A., Kabadayi S. "Delving into the role of different resources for value creation in the internal market." Servsig, Paris.</span></li>
-      <li><span class="conf-bullet">—</span><span>Boukis A., Magrizos S. "Managing brands in the blockchain era." Annual Macromarketing Conference, Leipzig.</span></li>
+    <h3 class="sub-h">Articles and interviews in Greek</h3>
+    <p class="note" style="margin-top:-6px">Titles translated into English.</p>
+    <ul class="press-list">
+<li><span class="pub-num">1</span><span><a href="https://www.capital.gr/me-apopsi/3622870/giati-oi-epixeiriseis-na-asxolithoun-me-tin-agora-ton-non-fungible-tokens-nfts" target="_blank" rel="noopener">Why businesses should engage with the NFT market</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">2</span><span><a href="https://www.capital.gr/me-apopsi/3519713/mporei-ena-dna-test-na-allaxei-tin-katanalotiki-sumperifora-sto-lianemporio" target="_blank" rel="noopener">Can a DNA test change consumer behaviour in retail?</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">3</span><span><a href="https://www.capital.gr/me-apopsi/3451773/oi-epiptoseis-tou-social-distancing-kai-tis-ergasias-apo-to-spiti-stis-katanalotikes-sunitheies" target="_blank" rel="noopener">The effects of social distancing and working from home on consumer habits</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">4</span><span><a href="https://www.capital.gr/me-apopsi/3400949/pos-oi-nees-empeiries-poluteleias-apeiloun-ta-paradosiaka-poluteli-brands" target="_blank" rel="noopener">How new luxury experiences threaten traditional luxury brands</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">5</span><span><a href="https://www.capital.gr/me-apopsi/3382596/mporoun-oi-ceo-ton-poluethnikon-na-exoun-kai-aktibistiki-drasi" target="_blank" rel="noopener">Can multinational CEOs also be activists?</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">6</span><span><a href="https://www.capital.gr/me-apopsi/3377427/ti-einai-oi-data-brokers-kai-pos-ekmetalleuontai-ta-prosopika-dedomena-ton-katanaloton" target="_blank" rel="noopener">What are data brokers and how do they exploit consumers&#x27; personal data?</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">7</span><span><a href="https://www.capital.gr/me-apopsi/3353003/pos-mporei-o-sxediasmos-tou-menou-na-auxisei-ton-tziro-enos-estiatoriou" target="_blank" rel="noopener">How can menu design increase a restaurant&#x27;s turnover?</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">8</span><span><a href="https://www.capital.gr/me-apopsi/3347060/ti-einai-i-oikonomia-diamoirasmou-kai-pos-mporoun-oi-idiotes-katanalotes-na-epofelithoun-apo-autin" target="_blank" rel="noopener">What is the sharing economy and how can consumers benefit from it?</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">9</span><span><a href="https://www.capital.gr/me-apopsi/3304217/kindunoi-kai-eukairies-gia-ta-ellinika-proionta-kai-exagoges-apo-ti-sumfonia-sto-skopiano" target="_blank" rel="noopener">Risks and opportunities for Greek products and exports from the North Macedonia name agreement</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">10</span><span><a href="https://www.capital.gr/me-apopsi/3300248/oi-sunepeies-tis-texnologias-blockchain-gia-ti-stratigiki-marketingk-ton-epixeiriseon" target="_blank" rel="noopener">The implications of blockchain technology for firms&#x27; marketing strategy</a> — <em>Capital.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">11</span><span><a href="https://www.skai.gr/news/greece/ereyna-pamak-oi-ellines-theloun-tourismo-alla-ypo-proypotheseis" target="_blank" rel="noopener">University of Macedonia survey: Greeks want tourism, but with conditions</a> — <em>Skai.gr</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">12</span><span><a href="https://www.youtube.com/watch?v=87lcpbfTEz0" target="_blank" rel="noopener">Data: the new oil, the new gold (video interview)</a> — <em>Athens-Macedonian News Agency</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">13</span><span>MARLAB survey: What tourism policies should Greece adopt in the post-coronavirus era? — <em>MARLAB</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">14</span><span>MARLAB survey: Will Greeks go on holiday this summer? — <em>MARLAB</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">15</span><span>How establishing private universities could benefit society and the country — <em>Kathimerini</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">16</span><span>How do all-you-can-eat restaurants stay profitable? — <em>Ethnos</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">17</span><span>How well do the internet giants know each of us? — <em>Ethnos</em> <span class="lang">in Greek</span></span></li>
+<li><span class="pub-num">18</span><span>What is digital marketing? — <em>Technologia, Cyprus</em> <span class="lang">in Greek</span></span></li>
     </ul>
   </section>
 
-  <!-- INVITED TALKS -->
-  <section id="talks">
-    <div class="section-label">Dissemination</div>
-    <h2>Invited Talks</h2>
-    <ul class="role-list">
-      <li><span class="role-dot"></span><span>Queensland University of Technology, Australia</span></li>
-      <li><span class="role-dot"></span><span>Zagreb School of Management, Croatia</span></li>
-      <li><span class="role-dot"></span><span>Bilkent University, Turkey</span></li>
-      <li><span class="role-dot"></span><span>Cass Business School</span></li>
-      <li><span class="role-dot"></span><span>University of Sharjah, UAE</span></li>
-      <li><span class="role-dot"></span><span>Deree College, Greece</span></li>
-      <li><span class="role-dot"></span><span>Newcastle University</span></li>
-      <li><span class="role-dot"></span><span>Liverpool John Moores University</span></li>
-      <li><span class="role-dot"></span><span>Athens-Macedonian News Agency — "Δεδομένα, το νέο πετρέλαιο, ο νέος χρυσός" (<a href="https://www.youtube.com/watch?v=87lcpbfTEz0" style="color:var(--gold); text-decoration:none;" target="_blank">YouTube</a>)</span></li>
-    </ul>
-  </section>
-
-  <!-- PRESS -->
-  <section id="press">
-    <div class="section-label">Public Engagement</div>
-    <h2>Press &amp; Commentary</h2>
-    <ol class="press-list">
-      <li><span class="pub-num">1</span><span>Τι είναι η οικονομία διαμοιρασμού και πώς μπορούν οι ιδιώτες καταναλωτές να επωφεληθούν — <a href="https://www.capital.gr/me-apopsi/3347060/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">2</span><span>Κίνδυνοι και ευκαιρίες για τα ελληνικά προϊόντα από τη συμφωνία στο Σκοπιανό — <a href="https://www.capital.gr/me-apopsi/3304217/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">3</span><span>Οι συνέπειες της τεχνολογίας blockchain για τη στρατηγική μάρκετινγκ — <a href="https://www.capital.gr/me-apopsi/3300248/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">4</span><span>Πως μπορεί ο σχεδιασμός του μενού να αυξήσει τον τζίρο ενός εστιατορίου — <a href="https://www.capital.gr/me-apopsi/3353003/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">5</span><span>Jack of All Trades? Why Twitter CEO needs to focus on innovation — <a href="https://www.businessleader.co.uk/jack-of-all-trades-why-twitter-ceo-needs-to-put-aside-his-personal-ambitions-and-focus-on-innovation-to-halt-the-decline-of-his-social-media-behemoth/70572/" target="_blank">Business Leader</a></span></li>
-      <li><span class="pub-num">6</span><span>Should CEOs become the moral voice of corporates? — <a href="https://www.businessleader.co.uk/should-ceos-become-the-moral-voice-of-corporates/76787/" target="_blank">Business Leader</a></span></li>
-      <li><span class="pub-num">7</span><span>How can supervisors help frontline staff cope with customer incivility? — <a href="https://hbrarabic.com/?p=101930" target="_blank">Harvard Business Review Arabia</a></span></li>
-      <li><span class="pub-num">8</span><span>NFTs: how top brands like Nike and Prada are using them — <a href="https://theconversation.com/nfts-how-top-brands-like-nike-and-prada-are-using-them-and-what-could-go-wrong-182446" target="_blank">The Conversation</a></span></li>
-      <li><span class="pub-num">9</span><span>Jaguar rebranding — A wilful controversy or a strategic misstep? — <a href="https://blog.bham.ac.uk/socialsciencesbirmingham/2024/12/02/jaguar-rebranding-a-wilful-controversy-or-a-strategic-misstep/" target="_blank">Birmingham Blog</a></span></li>
-      <li><span class="pub-num">10</span><span>The DEI Trilemma: Progress, Pushback, or Quiet Compliance? — <a href="https://blog.bham.ac.uk/socialsciencesbirmingham/2025/02/05/the-dei-trilemma-progress-pushback-or-quiet-compliance/" target="_blank">Birmingham Blog</a></span></li>
-      <li><span class="pub-num">11</span><span>Τι είναι οι data brokers και πως εκμεταλλεύονται τα προσωπικά δεδομένα — <a href="https://www.capital.gr/me-apopsi/3377427/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">12</span><span>Μπορούν οι CEO των επιχειρήσεων να είναι κ ακτιβιστές; — <a href="https://www.capital.gr/me-apopsi/3382596/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">13</span><span>Πώς οι νέες εμπειρίες πολυτέλειας απειλούν τα παραδοσιακά πολυτελή brands — <a href="https://www.capital.gr/me-apopsi/3400949/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">14</span><span>Γιατί οι επιχειρήσεις να ασχοληθούν με την αγορά των NFTs — <a href="https://www.capital.gr/me-apopsi/3622870/" target="_blank">Capital.gr</a></span></li>
-      <li><span class="pub-num">15</span><span>Μπορεί ένα DNA τεστ να αλλάξει την καταναλωτική συμπεριφορά στο λιανεμπόριο; — <a href="https://www.capital.gr/me-apopsi/3519713/" target="_blank">Capital.gr</a></span></li>
-    </ol>
-  </section>
-
+  <footer>© 2026 Achilleas Boukis · <a class="link-gold" href="mailto:a.boukis@bham.ac.uk">a.boukis@bham.ac.uk</a> · <a class="link-gold" href="#top">Back to top</a></footer>
 </main>
 
 <script>
-  // Active nav link on scroll
-  const sections = document.querySelectorAll('section[id], div.hero');
-  const navLinks = document.querySelectorAll('nav a');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const id = entry.target.id;
-        const active = document.querySelector(`nav a[href="#${id}"]`);
-        if (active) active.classList.add('active');
+  const nav = document.getElementById('sidenav');
+  const btn = document.getElementById('menuBtn');
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.textContent = open ? 'Close' : 'Menu';
+  });
+  nav.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open'); btn.setAttribute('aria-expanded', false); btn.textContent = 'Menu';
+  }));
+  const links = [...nav.querySelectorAll('a[href^="#"]')];
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
       }
     });
-  }, { rootMargin: '-30% 0px -60% 0px' });
-
-  sections.forEach(s => observer.observe(s));
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => obs.observe(s));
 </script>
+
 </body>
 </html>
